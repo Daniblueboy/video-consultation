@@ -1,27 +1,62 @@
-# VideoConsultation
+# 👩🏽‍⚕️ Secure Video Consultation Interface (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+A responsive web interface for secure doctor-patient video consultations, built with **Angular + Tailwind CSS** and integrated with **Jitsi Meet** for real-time video communication.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🎯 Project Objective
 
-## Code scaffolding
+To simulate a remote medical consultation platform where a **Doctor** and a **Patient** can securely log in, view each other over video, and manage their session in real time.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🧪 Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- 🔐 Role-based mock login (Doctor / Patient)
+- 📹 Live video chat powered by Jitsi Meet IFrame API
+- 🧑🏽‍⚕️ Real-time user info panel (Name, Role, Status, Timer)
+- 🎛️ Session controls:
+  - Mute / Unmute
+  - Start / Stop Video
+  - End session with confirmation modal
+- 🧘🏽 Clean responsive UI with Tailwind CSS
+- ⚡ Lazy loaded routes & standalone Angular architecture
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📸 Screenshots
 
-## Running end-to-end tests
+<img src="./src/assets/screenshot/login-dr.png" width="600" />
+<img src="./src/assets/screenshot/login-patient.png" width="600" />
+<img src="./src/assets/screenshot/login-bvalidation.png" width="600" />
+<img src="./src/assets/screenshot/consultation room-video on.png" width="600" />
+<img src="./src/assets/screenshot/consultation room -video off.png" width="600" />
+<img src="./src/assets/screenshot/end session validation modal.png" width="600" />
+<!-- Include screenshots of login screen + video screen with sidebar -->
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🛠️ Tech Stack
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+| Tool/Tech         | Purpose                           |
+|------------------|-----------------------------------|
+| Angular 17       | Frontend Framework (Standalone)   |
+| Tailwind CSS     | UI Styling                        |
+| Jitsi Meet API   | Video Communication               |
+| Angular Signals  | Local reactive state              |
+| Lazy Loading     | Optimized module loading          |
+
+---
+
+## 🚀 Setup Instructions
+
+```bash
+# Clone the repo
+git clone https://github.com/daniblueboy/secure-video-consultation.git
+cd secure-video-consultation
+
+# Install dependencies
+npm install
+
+# Run the app
+ng serve

@@ -1,0 +1,79 @@
+<div class="min-h-screen grid grid-cols-1 md:grid-cols-2">
+  <!-- Left: Image -->
+  <div
+    class="hidden md:block bg-cover bg-center"
+    style="background-image: url('https://img.freepik.com/free-photo/medicine-uniform-healthcare-medical-workers-day-concept_185193-108329.jpg?t=st=1744877253~exp=1744880853~hmac=5684fd6b865c638d68e3814ecf64594ed38bd9fa1b3bdd1b74336527ff35e1ea&w=826');"
+  >
+  </div>
+
+  <!-- Right: Login Form -->
+  <div class="flex items-center justify-center bg-white p-6 md:p-10">
+    <form
+      class="w-full max-w-md space-y-6"
+      (ngSubmit)="submit()"
+      #loginForm="ngForm"
+    >
+      <!-- Welcome Message -->
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl font-bold text-gray-800">Welcome 👋🏽</h2>
+        <p class="text-sm text-gray-600">
+          Please enter your name and select your role to join the consultation
+        </p>
+      </div>
+
+      <!-- Role Tabs -->
+      <div class="flex justify-center rounded overflow-hidden border border-gray-300">
+        <button
+          type="button"
+          class="w-1/2 py-2 text-sm font-medium transition"
+          [ngClass]="{
+            'bg-blue-600 text-white': role === 'doctor',
+            'bg-white text-blue-600 hover:bg-blue-50': role !== 'doctor'
+          }"
+          (click)="selectRole('doctor')"
+        >
+          Doctor
+        </button>
+
+        <button
+          type="button"
+          class="w-1/2 py-2 text-sm font-medium transition"
+          [ngClass]="{
+            'bg-green-600 text-white': role === 'patient',
+            'bg-white text-green-600 hover:bg-green-50': role !== 'patient'
+          }"
+          (click)="selectRole('patient')"
+        >
+          Patient
+        </button>
+      </div>
+
+      <!-- Name Input -->
+      <div>
+        <label class="block font-medium mb-1 text-gray-700">Your Name</label>
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="name"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your name"
+        />
+        <div
+          *ngIf="loginForm.submitted && !name"
+          class="text-red-600 text-sm mt-1"
+        >
+          Name is required.
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="w-full py-2 rounded bg-black text-white hover:bg-gray-900 font-semibold transition"
+      >
+        Join Meeting
+      </button>
+    </form>
+  </div>
+</div>

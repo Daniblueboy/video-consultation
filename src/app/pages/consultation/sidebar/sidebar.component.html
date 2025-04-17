@@ -1,0 +1,10 @@
+<aside class="w-full md:w-60 bg-gray-200 p-4 rounded-md shadow-md">
+    <div class="font-bold text-lg mb-2">Session Info</div>
+    <div class="text-sm">
+      <p><strong>Role:</strong> {{ role | titlecase  }}</p>  
+      <p><strong>Name:</strong> {{ name }}</p>
+      <p><strong>Status:</strong> <span class="text-blue-600">{{ status() }}</span></p>
+      <p><strong>Duration:</strong> {{ sessionTime() }}</p>
+    </div>
+  </aside>
+  
