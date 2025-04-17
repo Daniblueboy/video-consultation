@@ -48,6 +48,12 @@ To simulate a remote medical consultation platform where a **Doctor** and a **Pa
 
 ---
 
+## 📡 Live Demo
+
+Try the app live here:  
+👉 [https://medical-video-consultation.netlify.app](https://medical-video-consultation.netlify.app)
+
+
 ## 🚀 Setup Instructions
 
 ```bash
