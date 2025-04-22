@@ -6,15 +6,23 @@ import { Component, Input, signal } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css'
+  styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {
+
+///  sidebar component to show user details and session time
+  ///  this component is used in video room component
+  ///  it shows the user name, role and session time
+  ///  it also shows the status of the user
+  
   @Input() role: string = '';
   @Input() name: string = '';
 
   sessionTime = signal('00:00');
   private startTime!: number;
   status = signal('In Consultation');
+
+//  status is set to in consultation by default
 
   ngOnInit() {
     this.startTime = Date.now();
@@ -26,5 +34,4 @@ export class SidebarComponent {
       this.sessionTime.set(`${minutes}:${seconds}`);
     }, 1000);
   }
-
 }

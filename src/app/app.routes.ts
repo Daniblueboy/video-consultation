@@ -2,7 +2,8 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
-    { path: '', component: LoginComponent },
+  // lazy loading modules
+  { path: '', component: LoginComponent },
   {
     path: 'consultation',
     loadChildren: () =>

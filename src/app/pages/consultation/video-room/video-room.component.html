@@ -1,17 +1,16 @@
 <div class="min-h-screen flex flex-col">
+  <!-- header section to display user role in consultation room -->
   <header class="bg-gray-900 text-white p-4 text-center font-bold">
     {{ role | titlecase }} - Video Consultation Room
   </header>
 
   <div class="flex flex-col md:flex-row flex-1 p-4 gap-4">
-    <app-sidebar [role]="role || ''" [name]="name || ''"></app-sidebar>
-
-
+    <app-sidebar [role]="role || ''" [name]="name || ''"></app-sidebar> //
+    sidebar component
 
     <div class="flex-1">
-      <div id="jitsi-container" class="w-full  rounded-lg border">
-      
-      </div>
+      <div id="jitsi-container" class="w-full rounded-lg border"></div>
+
       <!-- Control Buttons -->
       <div class="flex justify-end gap-4 mt-4">
         <!-- <button
@@ -63,4 +62,3 @@
     </div>
   </div>
 </div>
-

@@ -8,9 +8,9 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
 })
 export class LoginComponent {
   name: string = '';
@@ -18,15 +18,16 @@ export class LoginComponent {
 
   constructor(private auth: AuthService, private router: Router) {}
 
+  //  role check method
   selectRole(role: UserRole) {
     this.role = role;
   }
 
-submit() {
-  if (!this.name.trim()) return;
+  //  method to handle login
+  submit() {
+    if (!this.name.trim()) return;
 
-  this.auth.setUser({ name: this.name.trim(), role: this.role });
-  this.router.navigate(['/consultation/room']);
-}
-
+    this.auth.setUser({ name: this.name.trim(), role: this.role });
+    this.router.navigate(['/consultation/room']);
+  }
 }
